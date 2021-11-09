@@ -1,5 +1,7 @@
 ﻿#include <iostream>
 
+using namespace std;
+
 void obzac()
 {
 	cout << "\n\n//====================================HomeWork====================================//\n\n";
@@ -12,8 +14,6 @@ void obzac2()
 {
 	cout << "\n\n//-------------------------------------------------------------------------------//\n\n";
 }
-
-using namespace std;
 
 
 /*HomeWork1
@@ -88,6 +88,7 @@ int main()
 {
 	{
 		//HomeWork1
+		obzac();
 		unique_ptr<Date> today(new Date(10, 11, 2021));
 		cout << "\n" << today->getDay() << ".0" << today->getMonth() << "." << today->getYear();
 		cout << *today;
@@ -99,10 +100,12 @@ int main()
 		else cout << "\nPointer \"date\" is not null";
 		if (today == nullptr) cout << "\nPointer \"today\" is null";
 		else cout << "\nPointer \"today\" is not null";
+		obzac2();
 	}
 
 	{
 		//HomeWork2
+		obzac();
 		unique_ptr<Date> date1(new Date(17, 3, 19));
 		unique_ptr<Date> date2(new Date(16, 3, 19));
 		cout << "\n\nLater date is: " << findLaterDate(date1, date2);
@@ -111,5 +114,7 @@ int main()
 		swapDates(date1, date2);
 		cout << "\nNew dates (swapped):" << *date1;
 		cout << *date2;
+		obzac1()
 	}
+	return 0;
 }
